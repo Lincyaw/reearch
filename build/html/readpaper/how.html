@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>如何阅读论文 &#8212; research-intro 0.0.1 文档</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="科研方法论" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">research-intro 0.0.1 文档</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   科研方法论
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     如何阅读论文
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/readpaper/how.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   第一遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   第二遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   第三遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   精读论文示例
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>如何阅读论文</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   第一遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   第二遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   第三遍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   精读论文示例
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="id1">
+<h1>如何阅读论文<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<p>绝大部分论文都遵循以下结构进行写作：</p>
+<ol class="arabic simple">
+<li><p><strong>Title</strong></p></li>
+<li><p><strong>Abstract</strong></p></li>
+<li><p><strong>Introduction</strong></p></li>
+<li><p><strong>Method</strong></p></li>
+<li><p><strong>Experiment</strong></p></li>
+<li><p><strong>Conclusion</strong></p></li>
+</ol>
+<p>理论上可以从头读到尾，这没有具体的限制。但由于时间有限，因此需要快速地找到适合自己的文章，并进行阅读。</p>
+<p>可以通过 <strong>读三遍</strong> 来快速达到这个目的。</p>
+<section id="id2">
+<h2>第一遍<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>路线：Title-&gt;Abstract-&gt;Conclusion-&gt;Important Figures in Experiment</p>
+</div>
+<p>这一边需要去关注标题、摘要、读完摘要之后，直接跳到结论。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>标题是用于了解这篇论文开头是什么东西，跟你是不是相关的。</p>
+<p>然后看一看摘要（摘要就是比较简单的介绍一下论文在做什么）</p>
+<p>最后直接跳到结论，结论通常和摘要是一样的，但是把摘要里面可能提出了一两个问题，
+用一些实际的结论，实际的数字给你证明一下。</p>
+</div>
+<p>你读完这三个部分啊，你大概就知道这篇论文是在讲什么东西。</p>
+<p>然后你可以跳到一些实验部分啊，一些关键的图和表，也可以去瞄一眼啊，在方法里面那些图和表看哪个干什么。</p>
+<p>通过这一遍通常就那么十几分钟的时间，你大概就知道这篇文章大概讲什么，质量怎么样就结果怎么样，方法看上去怎么样，是不是适合自己，这个是最重要的。你可以在这个地方决定。</p>
+</section>
+<section id="id3">
+<h2>第二遍<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>路线：All important figures and tables-&gt;Research method-&gt;Difference bewteen related works</p>
+</div>
+<p>在第一遍决定了确定要继续往下读之后，第二遍就要把整个文章过一遍，知道这篇文章在做什么东西。这个时候不需要太关注文章中细节，比如公式、证明这种。</p>
+<p>但这一遍需要把重要的图和表里面的每一个字都搞清楚，例如方法里面整个流程图长什么样子、算法里面的图长什么样子。实验里的每张图的x轴和y轴在干什么。</p>
+<p>作者提出的方法和别人的方法是怎么对比的，之间的差距有多大。</p>
+<p>这个时候可能没有特别搞清楚他在干什么，但是此时已经对整个论文的大概的部分有了一定的了解。</p>
+<p>可以把相关的文献圈出来，例如文中提到的方法是基于谁谁谁的方法进行改进的。如果这些相关的文献没有读过，就把他圈出来。</p>
+<p>这一边读完之后就决定要不要往下精读。如果觉得当前这篇文章太难，就去读之前的文章；如果这篇文章不相关，就跳过。</p>
+</section>
+<section id="id4">
+<h2>第三遍<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
+<p>这一遍需要把文章的每一句话都搞懂在说什么。</p>
+<p>换句话说就是在脑子里不断想象和重复实现这篇文章：</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>我提出了什么问题，用了什么方法来解决这个问题。</p>
+<p>如果是我来做这件事的话，会怎么做；我应该可以用什么东西来实现这个东西。</p>
+<p>在做实验的时候是怎么做的，换我来是怎么做，能不能比他做的更好，脑补一下整个过程是怎么做的。</p>
+</div>
+</section>
+<section id="id5">
+<h2>精读论文示例<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
+<p><a class="reference external" href="https://www.bilibili.com/video/BV1ih411J7Kz">AlexNet 精读（上）</a></p>
+<p><a class="reference external" href="https://www.bilibili.com/video/BV1hq4y157t1">AlexNet 精读（下）</a></p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">科研方法论</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By lincyaw<br/>
+  
+      &copy; Copyright 2022, lincyaw.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

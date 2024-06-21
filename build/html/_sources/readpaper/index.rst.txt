@@ -6,3 +6,4 @@
 
    how
    write
+   howtowritepaper
